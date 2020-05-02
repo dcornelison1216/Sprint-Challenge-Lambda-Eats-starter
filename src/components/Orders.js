@@ -9,22 +9,22 @@ const Orders = props => {
           <p style={{marginLeft: 1+"rem"}}>Order for {order.name}</p>
           <p style={{marginLeft: 1+"rem"}}>Size: {order.size}</p>
           <p style={{marginLeft: 1+"rem"}}>Toppings:</p>
-          {order.pepperoni.length > 0 ? <Topping className="toppings">{order.pepperoni}</Topping> : null}
-          {order.sausage.length > 0 ? <Topping className="toppings">{order.sausage}</Topping> : null}
-          {order.canadianBacon.length > 0 ? <Topping className="toppings">{order.canadianBacon}</Topping> : null}
-          {order.spicyItalianSausage.length > 0 ? <Topping className="toppings">{order.spicyItalianSausage}</Topping> : null}
-          {order.grilledChicken.length > 0 ? <Topping className="toppings">{order.grilledChicken}</Topping> : null}
-          {order.onions.length > 0 ? <Topping className="toppings">{order.onions}</Topping> : null}
-          {order.greenPepper.length > 0 ? <Topping className="toppings">{order.greenPepper}</Topping> : null}
-          {order.dicedTomatoes.length > 0 ? <Topping className="toppings">{order.dicedTomatoes}</Topping> : null}
-          {order.blackOlives.length > 0 ? <Topping className="toppings">{order.blackOlives}</Topping> : null}
-          {order.roastedGarlic.length > 0 ? <Topping className="toppings">{order.roastedGarlic}</Topping> : null}
-          {order.artichokeHearts.length > 0 ? <Topping className="toppings">{order.artichokeHearts}</Topping> : null}
-          {order.threeCheese.length > 0 ? <Topping className="toppings">{order.threeCheese}</Topping> : null}
-          {order.pineapple.length > 0 ? <Topping className="toppings">{order.pineapple}</Topping> : null}
-          {order.extraCheese.length > 0 ? <Topping className="toppings">{order.extraCheese}</Topping> : null}
+          {order.pepperoni ? <Topping className="toppings">Pepperoni</Topping> : null}
+          {order.sausage ? <Topping className="toppings">Sausage</Topping> : null}
+          {order.canadianBacon ? <Topping className="toppings"></Topping> : null}
+          {order.spicyItalianSausage ? <Topping className="toppings">Spicy Italian Sausage</Topping> : null}
+          {order.grilledChicken ? <Topping className="toppings">Grilled Chicken</Topping> : null}
+          {order.onions ? <Topping className="toppings">Onions</Topping> : null}
+          {order.greenPepper ? <Topping className="toppings">Green Pepper</Topping> : null}
+          {order.dicedTomatoes ? <Topping className="toppings">Diced Tomatoes</Topping> : null}
+          {order.blackOlives ? <Topping className="toppings">Black Olives</Topping> : null}
+          {order.roastedGarlic ? <Topping className="toppings">Roasted Garlic</Topping> : null}
+          {order.artichokeHearts ? <Topping className="toppings">Artichoke Hearts</Topping> : null}
+          {order.threeCheese ? <Topping className="toppings">Three Cheese</Topping> : null}
+          {order.pineapple ? <Topping className="toppings">Pineapple</Topping> : null}
+          {order.extraCheese ? <Topping className="toppings">Extra Cheese</Topping> : null}
 
-          {order.instructions.length > 0 ? <div><OrderInstructions>Special Instructions:</OrderInstructions><SpecialInstructions>{order.instructions}</SpecialInstructions></div> : null}
+          {order.instructions ? <div><OrderInstructions>Special Instructions:</OrderInstructions><SpecialInstructions>{order.instructions}</SpecialInstructions></div> : null}
 
         </OrderCard>
       ))}
