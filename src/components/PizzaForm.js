@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
-import axios from 'axios';
 import Orders from './Orders';
 import { SectionHeader, SectionHeadline, Required, NameInput, SizeSelector, InstructionsHeadline, Instructions, OrderButton, NameError } from '../AppStyles';
 import Toppings from './Toppings';
