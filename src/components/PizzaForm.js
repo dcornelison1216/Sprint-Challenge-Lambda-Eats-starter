@@ -49,13 +49,8 @@ const PizzaForm = () => {
 
   const formSubmit = e => {
     e.preventDefault();
-    axios
-      .post("https://reqres.in/api/users", formState)
-      .then(response => {
-        setFormState({name: "", size: "", pepperoni: "", sausage: "", canadianBacon: "", spicyItalianSausage: "", grilledChicken: "", onions: "", greenPepper: "", dicedTomatoes: "", blackOlives: "", roastedGarlic: "", artichokeHearts: "", threeCheese: "", pineapple: "", extraCheese: "", instructions: ""});
-        addNewOrder(response.data);
-      })
-      .catch(err => console.log(err.response));
+    addNewOrder(formState);
+    setFormState({name: "", size: "", pepperoni: "", sausage: "", canadianBacon: "", spicyItalianSausage: "", grilledChicken: "", onions: "", greenPepper: "", dicedTomatoes: "", blackOlives: "", roastedGarlic: "", artichokeHearts: "", threeCheese: "", pineapple: "", extraCheese: "", instructions: ""});
   };
 
   const inputChange = e => {
