@@ -102,7 +102,7 @@ const PizzaForm = () => {
         </SectionHeader>
 
         <label htmlFor="name">
-          <NameInput id="name" type="text" name="name" onChange={inputChange} value={formState.name} placeholder="Enter your name" />
+          <NameInput id="name" type="text" name="name" onChange={inputChange} value={formState.name} placeholder="Enter your name" data-cy="name" />
           {errors.name.length > 0 ? <NameError className="error"> {errors.name}</NameError> : null}
         </label>
 
@@ -113,12 +113,12 @@ const PizzaForm = () => {
 
         {/* dropdown form component for pizza size */}
         <label htmlFor="size">
-          <SizeSelector id="size" name="size" onChange={inputChange}>
+          <SizeSelector id="size" name="size" onChange={inputChange} data-cy="size">
             <option value="">Select</option>
-            <option value="small">Small (8 inches)</option>
-            <option value="medium">Medium (10 inches)</option>
-            <option value="large">Large (12 inches)</option>
-            <option value="x-large">XL (14 inches)</option>
+            <option value="small" data-cy="small">Small (8 inches)</option>
+            <option value="medium" data-cy="medium">Medium (10 inches)</option>
+            <option value="large" data-cy="large">Large (12 inches)</option>
+            <option value="x-large" data-cy="x-large">XL (14 inches)</option>
           </SizeSelector>
           {errors.size.length > 0 ? <p className="error">{errors.size}</p> : null}
         </label>

@@ -27,7 +27,7 @@ const App = () => {
     </Route>
 
     <Route exact path="/">
-    
+      <h1>Order a pizza already!</h1>
     </Route>
 
   </Router>
