@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import Orders from './Orders';
 import { SectionHeader, SectionHeadline, Required, NameInput, SizeSelector, InstructionsHeadline, Instructions, OrderButton, NameError } from '../AppStyles';
 import Toppings from './Toppings';
+import axios from 'axios';
 
 const PizzaForm = () => {
 
@@ -48,8 +49,15 @@ const PizzaForm = () => {
 
   const formSubmit = e => {
     e.preventDefault();
-    addNewOrder(formState);
-    setFormState({name: "", size: "", pepperoni: "", sausage: "", canadianBacon: "", spicyItalianSausage: "", grilledChicken: "", onions: "", greenPepper: "", dicedTomatoes: "", blackOlives: "", roastedGarlic: "", artichokeHearts: "", threeCheese: "", pineapple: "", extraCheese: "", instructions: ""});
+    axios
+      .post("https://reqres.in/api/users", formState)
+      .then(response => {
+        setFormState({name: "", size: "", pepperoni: "", sausage: "", canadianBacon: "", spicyItalianSausage: "", grilledChicken: "", onions: "", greenPepper: "", dicedTomatoes: "", blackOlives: "", roastedGarlic: "", artichokeHearts: "", threeCheese: "", pineapple: "", extraCheese: "", instructions: ""});
+        addNewOrder(formState);
+        console.log(JSON.stringify(response.data, null, 2));
+      })
+      .catch(err => console.log(err.response))
+
   };
 
   const inputChange = e => {
